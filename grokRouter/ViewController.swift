@@ -44,7 +44,7 @@ class ViewController: UIViewController {
       let URL = NSURL(string: Router.baseURLString)!
       let URLRequest = NSURLRequest(URL: URL.URLByAppendingPathComponent(result.path))
       
-      let encoding = Alamofire.ParameterEncoding.URL
+      let encoding = Alamofire.ParameterEncoding.JSON
       let (encoded, _) = encoding.encode(URLRequest, parameters: result.parameters)
       
       encoded.HTTPMethod = method.rawValue
