@@ -11,11 +11,51 @@ import Alamofire
 import SwiftyJSON
 
 class ViewController: UIViewController {
+  enum Router: URLRequestConvertible {
+    static let baseURLString = "http://jsonplaceholder.typicode.com/"
+    
+    case Get(Int)
+    case Create([String: AnyObject])
+    case Delete(Int)
+    
+    var URLRequest: NSMutableURLRequest {
+      var method: Alamofire.Method {
+        switch self {
+        case .Get:
+          return .GET
+        case .Create:
+          return .POST
+        case .Delete:
+          return .DELETE
+        }
+      }
+      
+      let result: (path: String, parameters: [String: AnyObject]?) = {
+        switch self {
+          case .Get(let postNumber):
+            return ("posts/\(postNumber)", nil)
+          case .Create(let newPost):
+            return ("posts", newPost)
+          case .Delete(let postNumber):
+            return ("posts/\(postNumber)", nil)
+        }
+      }()
+      
+      let URL = NSURL(string: Router.baseURLString)!
+      let URLRequest = NSURLRequest(URL: URL.URLByAppendingPathComponent(result.path))
+      
+      let encoding = Alamofire.ParameterEncoding.URL
+      let (encoded, _) = encoding.encode(URLRequest, parameters: result.parameters)
+      
+      encoded.HTTPMethod = method.rawValue
+      
+      return encoded
+    }
+  }
   
   func getFirstPost() {
     // Get first post
-    let postEndpoint: String = "http://jsonplaceholder.typicode.com/posts/1"
-    Alamofire.request(.GET, postEndpoint)
+    let request = Alamofire.request(Router.Get(1))
       .responseJSON { response in
         guard response.result.error == nil else {
           // got an error in getting the data, need to handle it
@@ -37,12 +77,12 @@ class ViewController: UIViewController {
           }
         }
     }
+    debugPrint(request)
   }
   
   func createPost() {
-    let postsEndpoint: String = "http://jsonplaceholder.typicode.com/posts"
     let newPost = ["title": "Frist Psot", "body": "I iz fisrt", "userId": 1]
-    Alamofire.request(.POST, postsEndpoint, parameters: newPost, encoding: .JSON)
+    Alamofire.request(Router.Create(newPost))
       .responseJSON { response in
         guard response.result.error == nil else {
           // got an error in getting the data, need to handle it
@@ -60,8 +100,7 @@ class ViewController: UIViewController {
   }
   
   func deleteFirstPost() {
-    let firstPostEndpoint: String = "http://jsonplaceholder.typicode.com/posts/1"
-    Alamofire.request(.DELETE, firstPostEndpoint)
+    Alamofire.request(Router.Delete(1))
       .responseJSON { response in
         if let error = response.result.error {
           // got an error while deleting, need to handle it
@@ -77,16 +116,15 @@ class ViewController: UIViewController {
     
     getFirstPost()
     
-    createPost()
+    //createPost()
     
-    deleteFirstPost()
+    //deleteFirstPost()
   }
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-
 
 }
 
