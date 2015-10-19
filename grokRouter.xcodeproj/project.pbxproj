@@ -1,0 +1,370 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CFD544721BD573CD00AB8352 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD544711BD573CD00AB8352 /* AppDelegate.swift */; };
+		CFD544741BD573CD00AB8352 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD544731BD573CD00AB8352 /* ViewController.swift */; };
+		CFD544771BD573CD00AB8352 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFD544751BD573CD00AB8352 /* Main.storyboard */; };
+		CFD544791BD573CD00AB8352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFD544781BD573CD00AB8352 /* Assets.xcassets */; };
+		CFD5447C1BD573CD00AB8352 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFD5447A1BD573CD00AB8352 /* LaunchScreen.storyboard */; };
+		E310E0E08E9348FB5049A939 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C02C5730886C35FB7EECC90 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0C02C5730886C35FB7EECC90 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		452BCC2C87B8934C53FA57C1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		AC45BE0033AEFF875DB08A9C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		CFD5446E1BD573CD00AB8352 /* grokRouter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grokRouter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFD544711BD573CD00AB8352 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CFD544731BD573CD00AB8352 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CFD544761BD573CD00AB8352 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CFD544781BD573CD00AB8352 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CFD5447B1BD573CD00AB8352 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CFD5447D1BD573CD00AB8352 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CFD5446B1BD573CD00AB8352 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E310E0E08E9348FB5049A939 /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		135A3D2B31FB64446C56104D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AC45BE0033AEFF875DB08A9C /* Pods.debug.xcconfig */,
+				452BCC2C87B8934C53FA57C1 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C3476921011A8CB1C7D1451A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C02C5730886C35FB7EECC90 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CFD544651BD573CD00AB8352 = {
+			isa = PBXGroup;
+			children = (
+				CFD544701BD573CD00AB8352 /* grokRouter */,
+				CFD5446F1BD573CD00AB8352 /* Products */,
+				135A3D2B31FB64446C56104D /* Pods */,
+				C3476921011A8CB1C7D1451A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CFD5446F1BD573CD00AB8352 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CFD5446E1BD573CD00AB8352 /* grokRouter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CFD544701BD573CD00AB8352 /* grokRouter */ = {
+			isa = PBXGroup;
+			children = (
+				CFD544711BD573CD00AB8352 /* AppDelegate.swift */,
+				CFD544731BD573CD00AB8352 /* ViewController.swift */,
+				CFD544751BD573CD00AB8352 /* Main.storyboard */,
+				CFD544781BD573CD00AB8352 /* Assets.xcassets */,
+				CFD5447A1BD573CD00AB8352 /* LaunchScreen.storyboard */,
+				CFD5447D1BD573CD00AB8352 /* Info.plist */,
+			);
+			path = grokRouter;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CFD5446D1BD573CD00AB8352 /* grokRouter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFD544801BD573CD00AB8352 /* Build configuration list for PBXNativeTarget "grokRouter" */;
+			buildPhases = (
+				ACD2D3A6E58B764FBD44EFF1 /* Check Pods Manifest.lock */,
+				CFD5446A1BD573CD00AB8352 /* Sources */,
+				CFD5446B1BD573CD00AB8352 /* Frameworks */,
+				CFD5446C1BD573CD00AB8352 /* Resources */,
+				6B399D7D7A249C27A91F7710 /* Embed Pods Frameworks */,
+				20B3ABA14FFA16319CB1D2E0 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = grokRouter;
+			productName = grokRouter;
+			productReference = CFD5446E1BD573CD00AB8352 /* grokRouter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CFD544661BD573CD00AB8352 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Teak Mobile Inc";
+				TargetAttributes = {
+					CFD5446D1BD573CD00AB8352 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = CFD544691BD573CD00AB8352 /* Build configuration list for PBXProject "grokRouter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CFD544651BD573CD00AB8352;
+			productRefGroup = CFD5446F1BD573CD00AB8352 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CFD5446D1BD573CD00AB8352 /* grokRouter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CFD5446C1BD573CD00AB8352 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFD5447C1BD573CD00AB8352 /* LaunchScreen.storyboard in Resources */,
+				CFD544791BD573CD00AB8352 /* Assets.xcassets in Resources */,
+				CFD544771BD573CD00AB8352 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		20B3ABA14FFA16319CB1D2E0 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B399D7D7A249C27A91F7710 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACD2D3A6E58B764FBD44EFF1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CFD5446A1BD573CD00AB8352 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFD544741BD573CD00AB8352 /* ViewController.swift in Sources */,
+				CFD544721BD573CD00AB8352 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CFD544751BD573CD00AB8352 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFD544761BD573CD00AB8352 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CFD5447A1BD573CD00AB8352 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFD5447B1BD573CD00AB8352 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CFD5447E1BD573CD00AB8352 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CFD5447F1BD573CD00AB8352 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CFD544811BD573CD00AB8352 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC45BE0033AEFF875DB08A9C /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = grokRouter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.teakmobile.grokswift.grokRouter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CFD544821BD573CD00AB8352 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 452BCC2C87B8934C53FA57C1 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = grokRouter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.teakmobile.grokswift.grokRouter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CFD544691BD573CD00AB8352 /* Build configuration list for PBXProject "grokRouter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFD5447E1BD573CD00AB8352 /* Debug */,
+				CFD5447F1BD573CD00AB8352 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFD544801BD573CD00AB8352 /* Build configuration list for PBXNativeTarget "grokRouter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFD544811BD573CD00AB8352 /* Debug */,
+				CFD544821BD573CD00AB8352 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CFD544661BD573CD00AB8352 /* Project object */;
+}
