@@ -30,26 +30,42 @@ class ViewController: UIViewController {
         }
       }
       
-      let result: (path: String, parameters: [String: AnyObject]?) = {
+      let url:NSURL = {
+        // build up and return the URL for each endpoint
+        let relativePath:String?
         switch self {
           case .Get(let postNumber):
-            return ("posts/\(postNumber)", nil)
-          case .Create(let newPost):
-            return ("posts", newPost)
+            relativePath = "posts/\(postNumber)"
+          case .Create:
+            relativePath = "posts"
           case .Delete(let postNumber):
-            return ("posts/\(postNumber)", nil)
+            relativePath = "posts/\(postNumber)"
+        }
+        
+        var URL = NSURL(string: Router.baseURLString)!
+        if let relativePath = relativePath {
+          URL = URL.URLByAppendingPathComponent(relativePath)
+        }
+        return URL
+      }()
+      
+      let params: ([String: AnyObject]?) = {
+        switch self {
+        case .Get, .Delete:
+          return (nil)
+        case .Create(let newPost):
+          return (newPost)
         }
       }()
       
-      let URL = NSURL(string: Router.baseURLString)!
-      let URLRequest = NSURLRequest(URL: URL.URLByAppendingPathComponent(result.path))
+      let URLRequest = NSMutableURLRequest(URL: url)
       
       let encoding = Alamofire.ParameterEncoding.JSON
-      let (encoded, _) = encoding.encode(URLRequest, parameters: result.parameters)
+      let (encodedRequest, _) = encoding.encode(URLRequest, parameters: params)
       
-      encoded.HTTPMethod = method.rawValue
+      encodedRequest.HTTPMethod = method.rawValue
       
-      return encoded
+      return encodedRequest
     }
   }
   
