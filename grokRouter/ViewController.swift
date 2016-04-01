@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 class ViewController: UIViewController {
-  enum Router: URLRequestConvertible {
+  enum PostRouter: URLRequestConvertible {
     static let baseURLString = "http://jsonplaceholder.typicode.com/"
     
     case Get(Int)
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
             relativePath = "posts/\(postNumber)"
         }
         
-        var URL = NSURL(string: Router.baseURLString)!
+        var URL = NSURL(string: PostRouter.baseURLString)!
         if let relativePath = relativePath {
           URL = URL.URLByAppendingPathComponent(relativePath)
         }
@@ -71,7 +71,7 @@ class ViewController: UIViewController {
   
   func getFirstPost() {
     // Get first post
-    let request = Alamofire.request(Router.Get(1))
+    let request = Alamofire.request(PostRouter.Get(1))
       .responseJSON { response in
         guard response.result.error == nil else {
           // got an error in getting the data, need to handle it
@@ -98,7 +98,7 @@ class ViewController: UIViewController {
   
   func createPost() {
     let newPost = ["title": "Frist Psot", "body": "I iz fisrt", "userId": 1]
-    Alamofire.request(Router.Create(newPost))
+    Alamofire.request(PostRouter.Create(newPost))
       .responseJSON { response in
         guard response.result.error == nil else {
           // got an error in getting the data, need to handle it
@@ -116,7 +116,7 @@ class ViewController: UIViewController {
   }
   
   func deleteFirstPost() {
-    Alamofire.request(Router.Delete(1))
+    Alamofire.request(PostRouter.Delete(1))
       .responseJSON { response in
         if let error = response.result.error {
           // got an error while deleting, need to handle it
